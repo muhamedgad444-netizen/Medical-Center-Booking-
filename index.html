@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مركز النخبة الطبي | حجز المواعيد وتنظيم الدور الإلكتروني</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- SVG Icons Sprite (Clean 1.6px Medical Line Icons - Zero Emojis) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+    <symbol id="i-location" viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  </svg>
+
+  <!-- Top Utility Bar -->
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <div class="live-indicator">
+        <span class="pulse-dot"></span>
+        <span>حالة العيادات الآن: <strong>مفتوح (الفترة المسائية)</strong> — تحديث مباشر لأرقام الدخول</span>
+      </div>
+      <div class="utility-meta">
+        <span><svg class="ic"><use href="#i-clock"/></svg> السبت – الخميس: 09:00 ص – 10:00 م</span>
+        <span class="sep">|</span>
+        <span class="num-ltr"><svg class="ic"><use href="#i-phone"/></svg> 9200-34180</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg class="ic-mark" viewBox="0 0 24 24">
+            <path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-name">مركز النخبة الطبي</span>
+          <span class="brand-sub">نظام حجز المواعيد وتنظيم الانتظار الذكي</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="روابط الصفحة">
+        <a href="#specialtiesSection">التخصصات وحالة الدور</a>
+        <a href="#hoursSection">مواعيد العمل</a>
+        <a href="#bookingSection" class="nav-cta">احجز دورك الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero + Split Layout -->
+    <section class="hero-section container">
+      <div class="hero-grid">
+
+        <!-- Right Column: Editorial Intro + Live Clinic Queue Board -->
+        <div class="hero-content">
+          <div class="eyebrow">تنظيم إلكتروني مسبق · بدون انتظار في الصالة</div>
+          <h1>احجز دورك قبل الحضور، وادخل على موعدك <span>في الوقت المحدد.</span></h1>
+          <p class="hero-lead">
+            بدلاً من الحجز الهاتفي والانتظار الطويل في صالة المراجعين، اختر العيادة والوقت المناسب لك ليصدر لك <strong>رقم دورك التقريبي</strong> و<strong>وقت الحضور المقترح</strong> بدقة قبل توجهك للمركز.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#bookingSection" class="btn btn-primary">
+              <span>حجز موعد ورقم دور فوري</span>
+              <svg class="ic"><use href="#i-arrow-left"/></svg>
+            </a>
+            <a href="#specialtiesSection" class="btn btn-outline">معاينة أرقام الدخول الحالية</a>
+          </div>
+
+          <!-- Key Operational Metrics -->
+          <div class="metrics-strip">
+            <div class="metric-item">
+              <strong class="mono">08 دقائق</strong>
+              <span>متوسط الانتظار عند الحجز المسبق</span>
+            </div>
+            <div class="metric-item">
+              <strong class="mono">6 عيادات</strong>
+              <span>تخصصات استشارية متاحة يومياً</span>
+            </div>
+            <div class="metric-item">
+              <strong class="mono">100%</strong>
+              <span>التزام بترتيب أرقام الحجز الإلكتروني</span>
+            </div>
+          </div>
+
+          <!-- Specialties & Live Queue Monitor -->
+          <div id="specialtiesSection" class="specialties-block">
+            <div class="section-header-inline">
+              <div>
+                <h2>تخصصات المركز وحالة الدور الآن</h2>
+                <p>اضغط على أي تخصص لاختياره مباشرة في نموذج الحجز</p>
+              </div>
+              <span class="live-tag">محدث تلقائياً</span>
+            </div>
+
+            <div id="specialtiesList" class="specialties-grid">
+              <!-- Populated by script.js -->
+            </div>
+          </div>
+
+          <!-- Working Hours & Attendance Guidelines -->
+          <div id="hoursSection" class="hours-card">
+            <div class="hours-head">
+              <svg class="ic"><use href="#i-clock"/></svg>
+              <div>
+                <h3>مواعيد العمل الرسمية وتنظيم الفترات</h3>
+                <p>يتم توزيع أرقام الدخول على فترتين يومياً لمنع التكدس</p>
+              </div>
+            </div>
+
+            <div class="shifts-grid">
+              <div class="shift-box">
+                <span class="shift-badge">الفترة الصباحية</span>
+                <strong class="mono">09:00 ص – 01:30 م</strong>
+                <p>استقبال المراجعين وأصحاب الحجوزات الصباحية (السبت إلى الخميس)</p>
+              </div>
+              <div class="shift-box">
+                <span class="shift-badge">الفترة المسائية</span>
+                <strong class="mono">04:30 م – 10:00 م</strong>
+                <p>جميع العيادات الاستشارية والتخصصية متاحة (السبت إلى الخميس)</p>
+              </div>
+            </div>
+
+            <div class="hours-note">
+              <svg class="ic"><use href="#i-location"/></svg>
+              <span>العنوان: الطريق الدائري، مبنى عيادات النخبة — الدور الأرضي والأول (مواقف مجانية للمراجعين).</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Column: Sticky Smart Booking Form & Instant Queue Ticket -->
+        <aside id="bookingSection" class="booking-column">
+          <div class="booking-card">
+
+            <!-- View 1: Smart Booking Form -->
+            <div id="bookingFormView">
+              <div class="card-header">
+                <span class="step-pill">حجز إلكتروني مباشر</span>
+                <h2>نموذج حجز الموعد ورقم الدور</h2>
+                <p>اختر العيادة والفترة الزمنية ليتم حساب رقم دورك ووقت حضورك المقترح</p>
+              </div>
+
+              <form id="appointmentForm" novalidate>
+                <!-- 1. Specialty Selection -->
+                <div class="form-group">
+                  <label for="specialtySelect">1. اختر التخصص / العيادة</label>
+                  <select id="specialtySelect" class="form-control" required></select>
+                  <div id="selectedClinicMeta" class="clinic-hint"></div>
+                </div>
+
+                <!-- 2. Day Selection -->
+                <div class="form-group">
+                  <label>2. اختر يوم المراجعة</label>
+                  <div id="daysPicker" class="days-grid" role="radiogroup" aria-label="يوم المراجعة"></div>
+                </div>
+
+                <!-- 3. Time Period & Slot Selection -->
+                <div class="form-group">
+                  <div class="label-row">
+                    <label>3. الفترة الزمنية المتاحة</label>
+                    <div class="shift-tabs" role="tablist">
+                      <button type="button" class="shift-tab" data-shift="morning">صباحاً</button>
+                      <button type="button" class="shift-tab active" data-shift="evening">مساءً</button>
+                    </div>
+                  </div>
+                  <div id="slotsPicker" class="slots-grid" role="radiogroup" aria-label="الفترة الزمنية"></div>
+                </div>
+
+                <!-- 4. Patient Basic Details -->
+                <div class="form-group">
+                  <label for="patientName">4. الاسم الكامل للمريض</label>
+                  <div class="input-with-icon">
+                    <svg class="ic"><use href="#i-user"/></svg>
+                    <input
+                      type="text"
+                      id="patientName"
+                      class="form-control"
+                      placeholder="مثال: عبد الله محمد القحطاني"
+                      autocomplete="name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="patientPhone">5. رقم الجوال (لإرسال تذكير الدور)</label>
+                  <div class="input-with-icon">
+                    <svg class="ic"><use href="#i-phone"/></svg>
+                    <input
+                      type="tel"
+                      id="patientPhone"
+                      class="form-control num-ltr"
+                      placeholder="05XXXXXXXX / 01XXXXXXXXX"
+                      inputmode="tel"
+                      autocomplete="tel"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <!-- Live Preview of Queue Calculation Before Submitting -->
+                <div class="queue-preview-bar">
+                  <div>
+                    <span>رقم الدور المتوقع:</span>
+                    <strong id="previewQueueNum" class="mono">A-14</strong>
+                  </div>
+                  <div>
+                    <span>الحضور المقترح:</span>
+                    <strong id="previewArrivalTime">05:50 م</strong>
+                  </div>
+                </div>
+
+                <p id="formError" class="form-error" role="alert"></p>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <svg class="ic"><use href="#i-check"/></svg>
+                  <span>تأكيد الحجز وإصدار بطاقة الدور</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- View 2: Confirmation & Queue Ticket Screen (Hidden until booked) -->
+            <div id="ticketConfirmationView" class="ticket-view hidden" aria-live="polite">
+              <div class="ticket-success-banner">
+                <div class="check-circle">
+                  <svg class="ic"><use href="#i-check"/></svg>
+                </div>
+                <div>
+                  <span class="success-tag">تم تأكيد حجزك بنجاح</span>
+                  <h3>بطاقة الدور وتفاصيل الحضور</h3>
+                </div>
+              </div>
+
+              <!-- Perforated Clinical Queue Ticket -->
+              <div class="clinical-ticket">
+                <div class="ticket-top">
+                  <div>
+                    <span class="ticket-label">رقم دورك التقريبي</span>
+                    <div id="ticketQueueNumber" class="ticket-number mono">A-14</div>
+                  </div>
+                  <div class="ticket-arrival-box">
+                    <span class="ticket-label">وقت الحضور المقترح</span>
+                    <strong id="ticketArrivalTime" class="ticket-arrival">05:50 مساءً</strong>
+                    <small>يرجى الحضور قبل الموعد بـ 10 دقائق فقط</small>
+                  </div>
+                </div>
+
+                <div class="ticket-divider">
+                  <span class="notch notch-right"></span>
+                  <span class="dashed-line"></span>
+                  <span class="notch notch-left"></span>
+                </div>
+
+                <div class="ticket-details">
+                  <div class="detail-row">
+                    <span>اسم المراجع:</span>
+                    <strong id="ticketPatientName">—</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>رقم الهاتف:</span>
+                    <strong id="ticketPatientPhone" class="mono">—</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>العيادة / التخصص:</span>
+                    <strong id="ticketSpecialty">—</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>الطبيب المناوب:</span>
+                    <strong id="ticketDoctor">—</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>اليوم والفترة المحجوزة:</span>
+                    <strong id="ticketDateTime">—</strong>
+                  </div>
+                  <div class="detail-row highlight-row">
+                    <span>حالة الانتظار المتوقعة:</span>
+                    <strong id="ticketWaitNote">أمامك مراجعان فقط في نفس الفترة</strong>
+                  </div>
+                </div>
+
+                <div class="ticket-Reference">
+                  <span class="mono" id="ticketRefCode">REF: ELITE-2026-8492</span>
+                  <span>أبرز هذه البطاقة لمكتب الاستقبال عند وصولك</span>
+                </div>
+              </div>
+
+              <div class="ticket-actions">
+                <button type="button" id="btnPrintTicket" class="btn btn-outline btn-block">
+                  <svg class="ic"><use href="#i-printer"/></svg>
+                  <span>طباعة بطاقة الدور / حفظ كـ PDF</span>
+                </button>
+                <button type="button" id="btnNewBooking" class="btn btn-ghost btn-block">
+                  حجز موعد آخر لمراجع جديد
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>مركز النخبة الطبي التخصصي</strong>
+        <p>نظام إلكتروني لتنظيم مواعيد المراجعين وتقليل أوقات الانتظار داخل العيادات.</p>
+      </div>
+      <div class="footer-meta">
+        <span>للطوارئ والاستفسارات: <b class="mono">9200-34180</b></span>
+        <span>جميع الحقوق محفوظة © 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
